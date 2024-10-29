@@ -1,0 +1,5 @@
+---- Description ----
+Value for stiffness: 3.0 --- Value for Density: 5000.0 ---- Value for Modulus of Elasticity: 4.0
+Lower values for stiffness --- Lower values for density ---- Lower values for modulus of elasticity
+---- Data ----
+name,density,modulus of elasticity
