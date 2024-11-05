@@ -521,16 +521,16 @@ print('Dataset Loaded')
 pendiente,familia,slope_mayor,slope_menor,rigidez,densidad,modulo,densi_mayor,densi_menor,modu_mayor,modu_menor = interfaz()
 
 #Filtrar datos por Familia, Modulo, Densidad y Pendiente
-listaMaterialesFinal,listaDensidadFinal,listaModuloFinal = filtrar.filtrar(listaMateriales,listaTipos,listaDensidad,listaModulo,familia,densidad,densi_mayor,modulo, modu_mayor,pendiente,rigidez,slope_mayor)
+listaMaterialesFinal,listaDensidadFinal,listaModuloFinal = filtrar(listaMateriales,listaTipos,listaDensidad,listaModulo,familia,densidad,densi_mayor,modulo, modu_mayor,pendiente,rigidez,slope_mayor)
 
 #Si la cantidad de materiales filtrados supera los 500, es preferible utilizar arreglos (procesamiento mas rapido)
 #listaMaterialesFinal,listaDensidadFinal,listaModuloFinal = filtrar.filtrarArreglos(listaMateriales,listaTipos,listaDensidad,listaModulo,familia,densidad,densi_mayor,modulo, modu_mayor)
 
 #Escribir Archivos de texto
-escribirArchivos.escribirArchivos(listaMaterialesFinal,listaDensidadFinal,listaModuloFinal,familia,rigidez,densidad,modulo,slope_mayor,densi_mayor,modu_mayor,pendiente)
+escribirArchivos(listaMaterialesFinal,listaDensidadFinal,listaModuloFinal,familia,rigidez,densidad,modulo,slope_mayor,densi_mayor,modu_mayor,pendiente)
 
 #Graficar valores
-g = grafica.grafica(diccionario,listaDensidad,listaModulo,listaMaterialesFinal,listaDensidadFinal,listaModuloFinal,densidad,modulo,rigidez,pendiente)
+g = grafica(diccionario,listaDensidad,listaModulo,listaMaterialesFinal,listaDensidadFinal,listaModuloFinal,densidad,modulo,rigidez,pendiente)
 
 
 #reportar resultados

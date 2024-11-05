@@ -6,18 +6,9 @@ Provides functions for writing a file named with the type of filtered material (
     Name, Density, Modulus of Elasticity (for all filtered materials)
 """
 import matplotlib
-matplotlib.use('Agg')
+matplotlib.use('TkAgg')
 import csv
 import os
-
-__author__ = "Bruno Paucar, Giovanny Chunga and Miguel Realpe"
-__credits__ = ["Bruno Paucar", "Giovanny Chunga", "Miguel Realpe",
-                    "Clotario Tapia"]
-__license__ = "GNU GPL"
-__version__ = "1.0.1"
-__maintainer__ = "Miguel Realpe"
-__email__ = "mrealpe@fiec.espol.edu.ec"
-__status__ = "Prototype"
 
 def writeFiles(finalMaterialsList, finalDensityList, finalModulusList, family, stiffness, density, modulus, slope_value, density_value, modulus_value, slope):
     stiffness_ = ""
@@ -51,23 +42,7 @@ def writeFiles(finalMaterialsList, finalDensityList, finalModulusList, family, s
         writer.writerow(row)
     file.close()
 
-#!/usr/bin/env python
-"""
-Provides functions for loading data from a CSV with the format:
-    Name, Category, URL, Density, Modulus of Elasticity
-"""
-
 import csv
-
-__author__ = "Bruno Paucar, Giovanny Chunga and Miguel Realpe"
-__credits__ = ["Bruno Paucar", "Giovanny Chunga", "Miguel Realpe",
-                    "Clotario Tapia"]
-__license__ = "GNU GPL"
-__version__ = "1.0.1"
-__maintainer__ = "Miguel Realpe"
-__email__ = "mrealpe@fiec.espol.edu.ec"
-__status__ = "Prototype"
-
 
 def readFile(csvFile):
     file = open(csvFile, 'r', newline='\n')
@@ -126,16 +101,6 @@ Provides filter functions for Ashby Methodology
 """
 
 import numpy as np
-
-__author__ = "Bruno Paucar, Giovanny Chunga and Miguel Realpe"
-__credits__ = ["Bruno Paucar", "Giovanny Chunga", "Miguel Realpe",
-                    "Clotario Tapia"]
-__license__ = "GNU GPL"
-__version__ = "1.0.1"
-__maintainer__ = "Miguel Realpe"
-__email__ = "mrealpe@fiec.espol.edu.ec"
-__status__ = "Prototype"
-
 
 def filterType(materialsList, typesList, densitiesList, moduliList, type_):
     filteredMaterials = []
@@ -258,14 +223,6 @@ Provides functions for plotting the "DENSITY vs MODULUS OF E" chart for the Ashb
 import matplotlib.pyplot as plt
 import numpy as np
 
-__author__ = "Bruno Paucar, Giovanny Chunga and Miguel Realpe"
-__credits__ = ["Bruno Paucar", "Giovanny Chunga", "Miguel Realpe", "Clotario Tapia"]
-__license__ = "GNU GPL"
-__version__ = "1.0.1"
-__maintainer__ = "Miguel Realpe"
-__email__ = "mrealpe@fiec.espol.edu.ec"
-__status__ = "Prototype"
-
 def line1(n):
     x = np.linspace(0.0001, 1000)
     y = n * x
@@ -359,15 +316,6 @@ Provides interface for Ashby Methodology
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-
-__author__ = "Bruno Paucar, Giovanny Chunga and Miguel Realpe"
-__credits__ = ["Bruno Paucar", "Giovanny Chunga", "Miguel Realpe", "Clotario Tapia"]
-__license__ = "GNU GPL"
-__version__ = "1.0.1"
-__maintainer__ = "Miguel Realpe"
-__email__ = "mrealpe@fiec.espol.edu.ec"
-__status__ = "Prototype"
-
 
 
 import tkinter as tk
@@ -472,13 +420,6 @@ Material selection software using Ashby Methodology
 Chart: DENSITY vs MODULUS OF ELASTICITY
 Dataset: data.csv
 """
-__author__ = "Bruno Paucar, Giovanny Chunga, and Miguel Realpe"
-__credits__ = ["Bruno Paucar", "Giovanny Chunga", "Miguel Realpe", "Clotario Tapia"]
-__license__ = "GNU GPL"
-__version__ = "1.0.1"
-__maintainer__ = "Miguel Realpe"
-__email__ = "mrealpe@fiec.espol.edu.ec"
-__status__ = "Prototype"
 
 print('----------SOFTWARE "DENSITY vs MODULUS OF ELASTICITY" CHART----------')
 print('Loading Dataset...')
@@ -510,6 +451,6 @@ g = plot(dictionary, density_list, modulus_list, final_materials_list, final_den
 print("Filtered materials: ", final_materials_list)
 print("Corresponding densities: ", final_density_list)
 print("Corresponding modulus values: ", final_modulus_list)
-plt.show(g)
+plt.show()
 
 

@@ -1,6 +1,0 @@
----- Description ----
-Value for stiffness: 5.0 --- Value for Density: 4000.0 ---- Value for Modulus of Elasticity: 4.0
-Lower values for stiffness --- Lower values for density ---- Lower values for modulus of elasticity
----- Data ----
-name,density,modulus of elasticity
-Overview of materials for Aluminum Alloy,0.016,0.048
